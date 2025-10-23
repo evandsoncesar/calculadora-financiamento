@@ -5,6 +5,7 @@ class FinancingCalculator {
       this.form = null;
       this.resultContainer = null;
       this.errorMessage = null;
+      this.currentResults = null;
       this.init();
    }
 
@@ -36,7 +37,10 @@ class FinancingCalculator {
       // Obter valores
       const totalValue = parseFloat(document.getElementById('total-value').value);
       const downPayment = parseFloat(document.getElementById('down-payment').value);
-      const annualRateString = document.getElementById('institution-select').value;
+      const institutionSelect = document.getElementById('institution-select');
+      const selectedOption = institutionSelect.options[institutionSelect.selectedIndex];
+      const institution = selectedOption.dataset.instituicao;
+      const annualRateString = institutionSelect.value;
       const annualRate = this.parseRate(annualRateString);
       const n = parseInt(document.getElementById('installments').value);
 
@@ -47,6 +51,15 @@ class FinancingCalculator {
 
       // Calcular
       const results = this.calculate(totalValue, downPayment, annualRate, n);
+
+      // Armazenar os resultados atuais para salvar no histórico
+      this.currentResults = {
+         totalValue,
+         downPayment,
+         institution,
+         installments: n,
+         ...results
+      };
 
       // Exibir resultados
       this.displayResults(results);
@@ -170,6 +183,9 @@ class FinancingCalculator {
                <span id="total-iof" class="text-2xl font-bold text-amber-700 dark:text-amber-300 block mt-2"></span>
             </div>
          </div>
+         <div class="mt-6 text-center">
+            <button id="save-history" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-smooth">Salvar no Histórico</button>
+         </div>
       `;
 
       this.resultContainer.innerHTML = resultsHTML;
@@ -182,6 +198,35 @@ class FinancingCalculator {
       document.getElementById('total-paid').textContent = this.formatCurrency(results.totalPaid);
       document.getElementById('total-interest').textContent = this.formatCurrency(results.totalInterest);
       document.getElementById('total-iof').textContent = this.formatCurrency(results.totalIOF);
+
+      // Adicionar listener para o botão de salvar
+      document.getElementById('save-history').addEventListener('click', () => this.saveToHistory());
+   }
+
+   saveToHistory() {
+      if (!this.currentResults) {
+         this.showError("Nenhum resultado para salvar.");
+         return;
+      }
+
+      const history = JSON.parse(localStorage.getItem('financingHistory')) || [];
+      
+      const newEntry = {
+         ...this.currentResults,
+         timestamp: new Date().toISOString()
+      };
+
+      history.push(newEntry);
+      localStorage.setItem('financingHistory', JSON.stringify(history));
+
+      // Feedback para o usuário
+      const saveButton = document.getElementById('save-history');
+      saveButton.textContent = 'Salvo!';
+      saveButton.disabled = true;
+      setTimeout(() => {
+         saveButton.textContent = 'Salvar no Histórico';
+         saveButton.disabled = false;
+      }, 2000);
    }
 
    parseRate(rateString) {
