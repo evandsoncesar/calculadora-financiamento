@@ -10,20 +10,18 @@ class ThemeManager {
   }
 
   init() {
-    // Aplicar tema imediatamente (antes do DOM estar pronto)
+    // Aplicar tema imediatamente para evitar flash de conteúdo sem estilo
     this.applyInitialTheme();
 
-    // Aguarda o DOM estar pronto para adicionar listeners
+    // Configurar listeners e ícones quando o DOM estiver pronto
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", () =>
-        this.setupListeners()
-      );
+      document.addEventListener("DOMContentLoaded", () => this.setup());
     } else {
-      this.setupListeners();
+      this.setup();
     }
   }
 
-  setupListeners() {
+  setup() {
     this.themeToggleBtn = document.getElementById("theme-toggle");
     this.sunIcon = document.getElementById("theme-toggle-sun");
     this.moonIcon = document.getElementById("theme-toggle-moon");
@@ -39,7 +37,7 @@ class ThemeManager {
       this.toggleTheme();
     });
 
-    // Atualizar ícones baseado no estado atual
+    // Atualizar ícones para refletir o tema inicial
     this.updateIconsDisplay();
   }
 
@@ -51,20 +49,18 @@ class ThemeManager {
 
     if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
       this.docElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
     } else {
       this.docElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
     }
   }
 
   toggleTheme() {
+    this.docElement.classList.toggle("dark");
+
     if (this.docElement.classList.contains("dark")) {
-      this.docElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      this.docElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
     }
 
     this.updateIconsDisplay();

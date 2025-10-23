@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Histórico de Simulações</title>
+   <!-- Tailwind CSS Config -->
+   <script>
+      tailwind.config = {
+         darkMode: 'class',
+      }
+   </script>
+   <!-- Tailwind CSS -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- Estilos Customizados -->
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 flex flex-col items-center justify-center min-h-screen p-4 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-300">
+
+   <div class="bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-2xl w-full max-w-6xl relative dark:bg-slate-800 border border-slate-100 dark:border-slate-700 transition-smooth">
+
+      <!-- TÍTULO -->
+      <div class="mb-8 text-center">
+         <h1 class="text-3xl sm:text-4xl font-bold text-slate-800 dark:text-white flex items-center justify-center gap-3">
+            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 003 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-1.442-.338-2.813-.958-4.042m-2.021-3.919A8.967 8.967 0 0012 3c-4.97 0-9 4.03-9 9c0 1.442.338 2.813.958 4.042m16.084-8.084a9 9 0 11-12.728 0M12 6v6l4 2" />
+            </svg>
+            Histórico de Simulações
+         </h1>
+      </div>
+
+      <!-- CONTROLES -->
+      <div class="flex justify-between items-center mb-4">
+        <a href="index.html" class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-smooth">Voltar à Calculadora</a>
+        <div>
+            <button id="export-json" class="px-4 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-smooth">Exportar para JSON</button>
+            <button id="clear-history" class="ml-2 px-4 py-2 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-smooth">Limpar Histórico</button>
+        </div>
+      </div>
+
+      <!-- TABELA DE HISTÓRICO -->
+      <div class="overflow-x-auto">
+         <table id="history-table" class="min-w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-md">
+            <thead class="bg-slate-100 dark:bg-slate-700">
+               <tr>
+                  <th class="p-4 text-left text-sm font-semibold text-slate-600 dark:text-slate-300">Data/Hora</th>
+                  <th class="p-4 text-left text-sm font-semibold text-slate-600 dark:text-slate-300">Valor do Veículo</th>
+                  <th class="p-4 text-left text-sm font-semibold text-slate-600 dark:text-slate-300">Entrada</th>
+                  <th class="p-4 text-left text-sm font-semibold text-slate-600 dark:text-slate-300">Instituição</th>
+                  <th class="p-4 text-left text-sm font-semibold text-slate-600 dark:text-slate-300">Parcelas</th>
+                  <th class="p-4 text-left text-sm font-semibold text-slate-600 dark:text-slate-300">Valor da Parcela</th>
+                  <th class="p-4 text-left text-sm font-semibold text-slate-600 dark:text-slate-300">Custo Total</th>
+                  <th class="p-4 text-left text-sm font-semibold text-slate-600 dark:text-slate-300">Total Juros</th>
+               </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+               <!-- Linhas do histórico serão inseridas aqui -->
+            </tbody>
+         </table>
+      </div>
+      <p id="no-history" class="text-center text-slate-500 dark:text-slate-400 mt-8 hidden">Nenhum histórico de simulação encontrado.</p>
+
+   </div>
+
+   <script src="js/theme.js"></script>
+   <script src="js/history.js"></script>
+</body>
+
+</html>

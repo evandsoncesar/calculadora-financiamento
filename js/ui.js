@@ -144,17 +144,31 @@ class UIManager {
    }
 
    setupInstitutionSelect() {
-      // Preencher select com dados
-      bankData.forEach(bank => {
-         const option = document.createElement('option');
-         option.value = bank.taxa_anual;
-         option.dataset.instituicao = bank.instituicao;
-         option.dataset.taxaMensal = bank.taxa_mensal;
-         option.textContent = `${bank.posicao}. ${bank.instituicao}`;
-         this.institutionSelect.appendChild(option);
-      });
+      fetch('dados_bancarios.json')
+         .then(response => {
+            if (!response.ok) {
+               throw new Error('Erro ao carregar os dados dos bancos.');
+            }
+            return response.json();
+         })
+         .then(bankData => {
+            // Preencher select com dados
+            bankData.forEach(bank => {
+               const option = document.createElement('option');
+               option.value = bank.taxa_anual;
+               option.dataset.instituicao = bank.instituicao;
+               option.dataset.taxaMensal = bank.taxa_mensal;
+               option.textContent = `${bank.posicao}. ${bank.instituicao}`;
+               this.institutionSelect.appendChild(option);
+            });
 
-      this.institutionSelect.addEventListener('change', () => this.updateRateDisplay());
+            this.institutionSelect.addEventListener('change', () => this.updateRateDisplay());
+         })
+         .catch(error => {
+            console.error('Falha na requisição:', error);
+            const calculator = new FinancingCalculator();
+            calculator.showError('Não foi possível carregar a lista de instituições financeiras.');
+         });
    }
 
    updateRateDisplay() {
