@@ -1,0 +1,260 @@
+[
+         {
+            "posicao": 1,
+            "instituicao": "BCO RNX S.A.",
+            "taxa_mensal": "0,00%",
+            "taxa_anual": "0,00%"
+         },
+         {
+            "posicao": 2,
+            "instituicao": "BCO MERCEDES-BENZ S.A.",
+            "taxa_mensal": "0,80%",
+            "taxa_anual": "10,06%"
+         },
+         {
+            "posicao": 3,
+            "instituicao": "BMW FINANCEIRA S.A. - CFI",
+            "taxa_mensal": "0,99%",
+            "taxa_anual": "12,56%"
+         },
+         {
+            "posicao": 4,
+            "instituicao": "BCO DA AMAZONIA S.A.",
+            "taxa_mensal": "1,09%",
+            "taxa_anual": "13,91%"
+         },
+         {
+            "posicao": 5,
+            "instituicao": "BANCO CNH INDUSTRIAL CAPITAL S.A.",
+            "taxa_mensal": "1,11%",
+            "taxa_anual": "14,18%"
+         },
+         {
+            "posicao": 6,
+            "instituicao": "BANCO HYUNDAI CAPITAL BRASIL",
+            "taxa_mensal": "1,14%",
+            "taxa_anual": "14,54%"
+         },
+         {
+            "posicao": 7,
+            "instituicao": "BCO VOLVO BRASIL S.A.",
+            "taxa_mensal": "1,23%",
+            "taxa_anual": "15,81%"
+         },
+         {
+            "posicao": 8,
+            "instituicao": "BCO RCI BRASIL S.A.",
+            "taxa_mensal": "1,24%",
+            "taxa_anual": "15,91%"
+         },
+         {
+            "posicao": 9,
+            "instituicao": "BCO PACCAR S.A.",
+            "taxa_mensal": "1,29%",
+            "taxa_anual": "16,57%"
+         },
+         {
+            "posicao": 10,
+            "instituicao": "BANCO TRATON BRASIL S.A.",
+            "taxa_mensal": "1,38%",
+            "taxa_anual": "17,83%"
+         },
+         {
+            "posicao": 11,
+            "instituicao": "BCO GM S.A.",
+            "taxa_mensal": "1,43%",
+            "taxa_anual": "18,55%"
+         },
+         {
+            "posicao": 12,
+            "instituicao": "SCANIA BCO S.A.",
+            "taxa_mensal": "1,48%",
+            "taxa_anual": "19,32%"
+         },
+         {
+            "posicao": 13,
+            "instituicao": "BCO BRADESCO S.A.",
+            "taxa_mensal": "1,62%",
+            "taxa_anual": "21,32%"
+         },
+         {
+            "posicao": 14,
+            "instituicao": "BCO VOLKSWAGEN S.A.",
+            "taxa_mensal": "1,62%",
+            "taxa_anual": "21,33%"
+         },
+         {
+            "posicao": 15,
+            "instituicao": "BCO. J.SAFRA S.A.",
+            "taxa_mensal": "1,70%",
+            "taxa_anual": "22,46%"
+         },
+         {
+            "posicao": 16,
+            "instituicao": "BCO RODOBENS S.A.",
+            "taxa_mensal": "1,71%",
+            "taxa_anual": "22,53%"
+         },
+         {
+            "posicao": 17,
+            "instituicao": "STELLANTIS FINANCIAMENTOS CFI",
+            "taxa_mensal": "1,78%",
+            "taxa_anual": "23,50%"
+         },
+         {
+            "posicao": 18,
+            "instituicao": "BCO SAFRA S.A.",
+            "taxa_mensal": "1,78%",
+            "taxa_anual": "23,60%"
+         },
+         {
+            "posicao": 19,
+            "instituicao": "BANCO INTER",
+            "taxa_mensal": "1,81%",
+            "taxa_anual": "24,02%"
+         },
+         {
+            "posicao": 20,
+            "instituicao": "BCO TOYOTA DO BRASIL S.A.",
+            "taxa_mensal": "1,82%",
+            "taxa_anual": "24,09%"
+         },
+         {
+            "posicao": 21,
+            "instituicao": "BCO BANESTES S.A.",
+            "taxa_mensal": "1,83%",
+            "taxa_anual": "24,24%"
+         },
+         {
+            "posicao": 22,
+            "instituicao": "SAFRA CFI S.A.",
+            "taxa_mensal": "1,85%",
+            "taxa_anual": "24,59%"
+         },
+         {
+            "posicao": 23,
+            "instituicao": "BANCO BTG PACTUAL S.A.",
+            "taxa_mensal": "1,88%",
+            "taxa_anual": "25,01%"
+         },
+         {
+            "posicao": 24,
+            "instituicao": "CAIXA ECONOMICA FEDERAL",
+            "taxa_mensal": "1,88%",
+            "taxa_anual": "25,09%"
+         },
+         {
+            "posicao": 25,
+            "instituicao": "SINOSSERRA S/A - SCFI",
+            "taxa_mensal": "1,99%",
+            "taxa_anual": "26,61%"
+         },
+         {
+            "posicao": 26,
+            "instituicao": "PORTOSEG S.A. CFI",
+            "taxa_mensal": "1,99%",
+            "taxa_anual": "26,73%"
+         },
+         {
+            "posicao": 27,
+            "instituicao": "BCO C6 S.A.",
+            "taxa_mensal": "2,01%",
+            "taxa_anual": "26,90%"
+         },
+         {
+            "posicao": 28,
+            "instituicao": "ITAÚ UNIBANCO HOLDING S.A.",
+            "taxa_mensal": "2,01%",
+            "taxa_anual": "26,92%"
+         },
+         {
+            "posicao": 29,
+            "instituicao": "BRB - CFI S/A",
+            "taxa_mensal": "2,03%",
+            "taxa_anual": "27,24%"
+         },
+         {
+            "posicao": 30,
+            "instituicao": "BCO BRASILEIRO DE CRÉDITO S.A.",
+            "taxa_mensal": "2,04%",
+            "taxa_anual": "27,35%"
+         },
+         {
+            "posicao": 31,
+            "instituicao": "BCO BRADESCO FINANC. S.A.",
+            "taxa_mensal": "2,06%",
+            "taxa_anual": "27,71%"
+         },
+         {
+            "posicao": 32,
+            "instituicao": "SANTANDER SCFI S.A.",
+            "taxa_mensal": "2,07%",
+            "taxa_anual": "27,88%"
+         },
+         {
+            "posicao": 33,
+            "instituicao": "BCO VOTORANTIM S.A.",
+            "taxa_mensal": "2,21%",
+            "taxa_anual": "30,06%"
+         },
+         {
+            "posicao": 34,
+            "instituicao": "BCO DO BRASIL S.A.",
+            "taxa_mensal": "2,22%",
+            "taxa_anual": "30,08%"
+         },
+         {
+            "posicao": 35,
+            "instituicao": "BCO HONDA S.A.",
+            "taxa_mensal": "2,50%",
+            "taxa_anual": "34,48%"
+         },
+         {
+            "posicao": 36,
+            "instituicao": "AGORACRED S/A SCFI",
+            "taxa_mensal": "2,55%",
+            "taxa_anual": "35,30%"
+         },
+         {
+            "posicao": 37,
+            "instituicao": "BCO YAMAHA MOTOR S.A.",
+            "taxa_mensal": "2,59%",
+            "taxa_anual": "35,95%"
+         },
+         {
+            "posicao": 38,
+            "instituicao": "BCO DIGIMAIS S.A.",
+            "taxa_mensal": "3,00%",
+            "taxa_anual": "42,65%"
+         },
+         {
+            "posicao": 39,
+            "instituicao": "BANCO PAN",
+            "taxa_mensal": "3,05%",
+            "taxa_anual": "43,40%"
+         },
+         {
+            "posicao": 40,
+            "instituicao": "SIMPALA S.A. CFI",
+            "taxa_mensal": "3,10%",
+            "taxa_anual": "44,17%"
+         },
+         {
+            "posicao": 41,
+            "instituicao": "FINAMAX S.A. CFI",
+            "taxa_mensal": "3,13%",
+            "taxa_anual": "44,77%"
+         },
+         {
+            "posicao": 42,
+            "instituicao": "BCO DAYCOVAL S.A.",
+            "taxa_mensal": "3,15%",
+            "taxa_anual": "45,09%"
+         },
+         {
+            "posicao": 43,
+            "instituicao": "OMNI SA CFI",
+            "taxa_mensal": "3,31%",
+            "taxa_anual": "47,87%"
+         }
+      ]
